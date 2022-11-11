@@ -1,0 +1,82 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.cita {
+    margin-bottom: 2rem;
+     text-align: center;
+    .titulo-principal {
+        text-align: center;
+    }
+    .lista-servicios {
+        @include m.tablet {
+            @include m.grid(4, 2rem);
+        }
+        .servicio {
+            border: 0.1rem solid v.$azul;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                background-color: v.$azul;
+                cursor: pointer;
+                .titulo {
+                    color: v.$blanco;
+                }
+                .precio {
+                    color: v.$amarillo;
+                    font-weight: v.$bold;
+                }
+            }
+        }
+    }
+    .footer-cita {
+        display: flex;
+        flex-direction: column;
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fecha{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: space-between;
+            flex: 1;
+
+            @include m.tablet{
+                flex-direction: row;
+            }
+            .input-fecha{
+                padding: 1rem;
+                color: v.$amarillo;
+
+            }
+            .input-hora{
+                padding: 1rem;
+                color: v.$amarillo;
+            }
+        }
+        .total{
+            flex: 1;
+            p{
+                font-size: 2rem;
+                font-weight: v.$bold;
+            }
+        }
+    }
+    .boton-cita{
+        text-align: center;
+        background-color: v.$amarillo;
+        color: v.$blanco;
+        padding: 1.5rem 2rem;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 auto;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: darken(v.$amarillo, 5%);
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use "variables" as v;
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: v.$fuente_principal;
+    margin: 0 0 calc(v.$separacion / 2) 0;
+    font-weight: 900;
+    text-align: center;
+    color: v.$amarillo;
+}
+
+h1::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+h2::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+h3::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+h4::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+h5::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+h6::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+p::selection {
+    color: v.$negro;
+    background-color: v.$blanco;
+}
+span::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+a::selection {
+    color: v.$amarillo;
+    background-color: v.$blanco;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+p {
+    font-size: 1.6rem;
+    color: v.$gris;
+}
+
+.nombre-pagina a {
+    color: v.$amarillo;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.nombre-sitio {
+    margin-top: 2rem;
+}

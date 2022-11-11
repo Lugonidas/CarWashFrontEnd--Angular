@@ -96,12 +96,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/scss/base/_variables.scss",
+              "src/scss/base/_mixins.scss",
+              "src/scss/base/_normalize.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c96b181c-eb4d-4dd1-8029-feffe86a396d"
   }
 }

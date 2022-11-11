@@ -1,0 +1,53 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.crear-usuario {
+    .formulario {
+        @include m.tablet {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .campo {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: v.$negro;
+                font-weight: v.$bold;
+            }
+
+            input:not([type="submit"]) {
+                all: unset;
+                padding: 1rem 0.5rem;
+                border-bottom: 0.1rem solid v.$negro;
+                margin-bottom: 2rem;
+                transition: all 0.3s ease-in-out;
+
+                &:focus {
+                    background-color: lighten(v.$azul, 10%);
+                    color: v.$blanco;
+                    font-weight: v.$bold;
+                }
+            }
+        }
+
+        .acciones__boton {
+            text-align: center;
+            .boton {
+                all: unset;
+                padding: 1rem 1.5rem;
+                background-color: v.$amarillo;
+                color: v.$blanco;
+                font-weight: v.$bold;
+                display: inline-block;
+                margin: 0 auto;
+                transition: all 0.5 ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: darkne(v.$amarillo, 5%);
+                }
+            }
+        }
+    }
+}

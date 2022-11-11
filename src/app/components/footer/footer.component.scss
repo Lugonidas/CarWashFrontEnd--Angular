@@ -1,0 +1,159 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.footer {
+    background-color: lighten(v.$amarillo, 10%);
+
+    &.ocultar{
+        display: none;
+    }
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        margin: 0 auto;
+        color: v.$negro;
+
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            @include m.tablet{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer__nosotros {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-bottom: 1rem;
+
+                .nombre-pagina {
+                    font-size: 1.8rem;
+                    margin: 0;
+
+                    a {
+                        color: v.$azul;
+                        text-decoration: none;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1.2rem;
+                    color: v.$negro;
+                    line-height: 2.5rem;
+                }
+            }
+            .social {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-bottom: 1rem;
+
+                h4 {
+                    color: v.$azul;
+                    margin-bottom: 1rem;
+                }
+                .nav {
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    a {
+                        font-size: 2.2rem;
+                        transition: all 0.5s ease;
+                        color: v.$blanco;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            transform-origin: 20% 100%;
+                        }
+                        .fa-facebook {
+                            &:hover {
+                                color: v.$azul;
+                            }
+                        }
+                        .fa-twitter {
+                            &:hover {
+                                color: lighten(v.$azul, 10%);
+                            }
+                        }
+                        .fa-instagram {
+                            &:hover {
+                                color: darken(v.$amarillo, 10%);
+                            }
+                        }
+                        .fa-youtube {
+                            &:hover {
+                                color: v.$rojo;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contacto {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                border-bottom: .1rem solid v.$blanco;
+                border-top: .1rem solid v.$blanco;
+                padding: 1rem 0;
+
+                @include m.tablet{
+                    border: none;
+                }
+
+                h4 {
+                    color: v.$azul;
+                    font-weight: v.$black;
+                    font-size: 1.2rem;
+                    margin: 0;
+                }
+                .contenido {
+                    text-align: left;
+                    p {
+                        font-size: 1.2rem;
+                        color: v.$negro;
+                        i {
+                            margin-right: 2rem;
+                            font-size: 2.2rem;
+                            color: v.$rojo;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedor-sm {
+            text-align: center;
+
+            .copyright {
+                width: 100%;
+                text-align: left;
+                padding: 0 1rem;
+                p {
+                    font-size: 1.2rem;
+                    margin: 0;
+                    color: v.$negro;
+
+                    span {
+                        font-weight: v.$black;
+                        color: v.$azul;
+                    }
+                }
+            }
+        }
+    }
+}

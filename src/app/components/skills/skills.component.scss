@@ -1,0 +1,39 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.nosotros {
+    width: 70%;
+    margin: 0 auto;
+
+    .empresa {
+        .title {
+            text-align: center;
+            font-weight: v.$bold;
+            font-size: 2.8rem;
+            color: v.$amarillo;
+        }
+
+        p{
+            line-height: 2rem;
+        }
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        margin: 2rem;
+
+        @include m.tablet {
+            @include m.grid(4, 2rem);
+        }
+
+        .skill {
+            img {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

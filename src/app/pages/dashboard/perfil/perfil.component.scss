@@ -1,0 +1,65 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.perfil{
+    position: relative;
+    overflow: hidden;
+    .svg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    @include m.tablet{
+        width: 60%;
+        padding: 2rem;
+    }
+    .titulo{
+        text-align: center;
+        margin: 0;
+    }
+
+    .formulario{
+
+
+        .campo{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+
+            input{
+                all: unset;
+                padding: .5rem;
+                border-bottom: .1rem solid v.$azul;
+                transition: border-bottom .3s ease-in;
+
+                &:focus{
+                    border-bottom: .1rem solid v.$amarillo;
+                }
+            }
+        }
+
+        .acciones-boton{
+            text-align: center;
+
+            input{
+                all: unset;
+                padding: .5rem 1rem;
+                background-color: v.$azul;
+                color: v.$blanco;
+                font-weight: v.$bold;
+                transition: background-color .5s ease-in-out;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: lighten(v.$azul, 10%);
+                }
+            }
+        
+        }
+    }
+}

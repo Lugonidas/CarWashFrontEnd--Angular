@@ -1,0 +1,170 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.hero {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all 0.5s ease-in-out;
+
+    @include m.tablet {
+        width: 80%;
+        margin: 1rem auto;
+        gap: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contenido {
+        flex: 1;
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        gap: 2rem;
+        transition: all 0.5s ease-in-out;
+
+        &__text {
+            margin: 0;
+            line-height: 2.5rem;
+            text-align: justify;
+            span {
+                font-size: 2.4rem;
+                font-weight: v.$bold;
+                color: v.$amarillo;
+            }
+        }
+
+        .btn__solicitar {
+            background-color: v.$amarillo;
+            padding: 1rem;
+            text-align: center;
+            font-weight: v.$bold;
+            color: v.$blanco;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: darken(v.$amarillo, 5%);
+            }
+        }
+    }
+
+    .imagen {
+        transition: all 0.5s ease-in-out;
+
+        img {
+            display: block;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    
+}
+
+.servicios-container {
+    display: flex;
+    flex-direction: column;
+    .servicios {
+        margin: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @include m.tablet {
+            @include m.grid(4, 2rem);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        &__servicio {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 2rem;
+            border: 0.2rem solid lighten(v.$azul, 10%);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: lighten(v.$azul, 10%);
+
+                p {
+                    color: v.$blanco;
+                }
+
+                span {
+                    color: v.$blanco;
+                }
+                .precio {
+                    color: v.$amarillo;
+                    font-weight: v.$bold;
+                }
+
+                li {
+                    color: v.$blanco;
+                }
+            }
+
+            &__imagen {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            &__contenido {
+                flex: 1;
+
+                p {
+                    text-align: center;
+                    font-weight: v.$bold;
+                    color: #262626;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                span {
+                    color: #262626;
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                }
+
+                &__lista {
+                    color: #262626;
+                    transition: all 0.5s ease-in-out;
+
+                    .precio {
+                        color: v.$amarillo;
+                        font-weight: v.$bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .boton {
+        text-align: center;
+        margin: 0 0 2rem 0;
+
+        @include m.tablet{
+            text-align: right;
+        }
+
+        .btn-servicios {
+            color: v.$blanco;
+            text-decoration: none;
+            font-weight: v.$bold;
+            background-color: v.$azul;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background-color: darken(v.$azul, 10%);
+            }
+        }
+    }
+}

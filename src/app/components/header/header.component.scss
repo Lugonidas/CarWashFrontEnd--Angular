@@ -1,0 +1,86 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.header {
+    &.ocultar {
+        display: none;
+    }
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 10vh;
+        border-bottom: 0.1rem solid v.$azul;
+    }
+
+    a {
+        color: v.$azul;
+        text-decoration: none;
+        font-weight: v.$bold;
+        font-size: 1.2rem;
+        padding: 1rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .barra {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .logo {
+            span {
+                font-size: 1.5rem;
+                margin-right: 0.2rem;
+                color: v.$amarillo;
+            }
+        }
+
+        .menu__mobile {
+            padding: 0 1rem;
+            span {
+                font-size: 3rem;
+                font-weight: v.$bold;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    color: darken(v.$amarillo, 5%);
+                }
+            }
+
+            @include m.tablet {
+                display: none;
+            }
+        }
+    }
+
+    .nav {
+        display: none;
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+            flex: 2;
+            justify-content: center;
+        }
+
+        a {
+            &:hover {
+                background-color: v.$amarillo;
+                color: v.$blanco;
+            }
+        }
+
+        &.mostrar {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include m.tablet {
+                display: none;
+            }
+        }
+    }
+}

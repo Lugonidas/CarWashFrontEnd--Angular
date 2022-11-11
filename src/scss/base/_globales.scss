@@ -1,0 +1,46 @@
+@use "variables" as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    font-family: v.$fuente_principal;
+    background-color: v.$negro;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedor-sm {
+    width: 90%;
+    height: auto;
+    max-width: 100rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.app {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}

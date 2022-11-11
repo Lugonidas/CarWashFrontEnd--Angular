@@ -1,0 +1,19 @@
+@use "/src/scss/base/variables" as v;
+@use "/src/scss/base/mixins" as m;
+
+.privado {
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        gap: 2rem;
+        flex-direction: row;
+    }
+
+    .contenido {
+        flex: 1;
+        height: 100vh;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
